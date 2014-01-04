@@ -132,7 +132,7 @@ public class AIOFisher extends PollingScript implements MessageListener {
     }
 
     public int poll() {
-        while (gui.isActive()) sleep(350);
+
           for (Node node : nodes) {
             if (node.validate()) {
                 node.execute();
@@ -143,6 +143,7 @@ public class AIOFisher extends PollingScript implements MessageListener {
     }
 
        public void start() {
+
         if (ctx.game.isLoggedIn()) {
             setup();
         }

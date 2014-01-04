@@ -17,7 +17,7 @@ public class AntiPattern extends Node {
     }
 
     public void execute() {
-        int anti = Random.nextInt(0, 10);
+        int anti = Random.nextInt(0, 30);
         switch(anti) {
 
             case 1:
@@ -53,19 +53,7 @@ public class AntiPattern extends Node {
                     }
                 }
                 break;
-
-            case 6:
-                for(Item i : ctx.backpack.select().first()) {
-                    if(i != null) {
-
-                        i.hover();
-                        sleep(500, 1400);
-                    }
-                }
-                break;
         }
-
-
     }
 
     public String getStatus() {

@@ -66,7 +66,7 @@ public class Constants {
             new Tile(2876, 3158, 0), new Tile(2880, 3162, 0), new Tile(2884, 3165, 0),
             new Tile(2889, 3167, 0), new Tile(2894, 3168, 0), new Tile(2898, 3170, 0),
             new Tile(2903, 3171, 0), new Tile(2909, 3171, 0), new Tile(2914, 3171, 0),
-            new Tile(2919, 3171, 0), new Tile(2924, 3172, 0), new Tile(2924, 3177, 0) };
+            new Tile(2919, 3171, 0), new Tile(2924, 3172, 0), new Tile(2924, 3177, 0), new Tile(2925, 3178, 0) };
     public static final Area STILES_AREA = new Area(new Tile(2848, 3141, 0), new Tile(2855, 3147, 0));
     public static final Area KARAMJA_FISH_AREA = new Area( new Tile(2919, 3185, 0), new Tile(2929, 3173, 0));
     public static final String KARAMJA_METHOD_CAGE = "Cage";
