@@ -2,6 +2,7 @@ package Fisher;
 
 import Fisher.Jobs.Dropping;
 import Fisher.Utils.AntiPattern;
+import Fisher.Utils.Widgets;
 import org.powerbot.event.MessageListener;
 import org.powerbot.script.Manifest;
 import org.powerbot.script.PollingScript;
@@ -47,7 +48,8 @@ public class AIOFisher extends PollingScript implements MessageListener {
                             new ToFish(ctx),
                             new TurnTo(ctx),
                             new DroppingTuna(ctx),
-                            new AntiPattern(ctx)
+                            new AntiPattern(ctx),
+                            new Widgets(ctx)
                     );
     }
 
@@ -132,9 +134,10 @@ public class AIOFisher extends PollingScript implements MessageListener {
     }
 
     public int poll() {
-
-          for (Node node : nodes) {
+         for (Node node : nodes) {
             if (node.validate()) {
+                int value = (ctx.settings.get(3148) >>> 18) & 0xFFF;
+                System.out.println(value);
                 node.execute();
                 return org.powerbot.script.util.Random.nextInt(250, 375);
             }

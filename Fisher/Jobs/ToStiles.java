@@ -10,16 +10,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Created with IntelliJ IDEA.
- * User: PamontB
- * Date: 1/3/14
- * Time: 11:26 PM
- * To change this template use File | Settings | File Templates.
- */
 public class ToStiles extends Node {
-
-    private Npc stiles = ctx.npcs.getNil();
 
     public ToStiles(MethodContext ctx) {
         super(ctx);
@@ -27,9 +18,7 @@ public class ToStiles extends Node {
 
     @Override
     public boolean validate(){
-        for (Npc pool : ctx.npcs.select().id(11267).nearest().first()) {
-            stiles = pool;
-        }
+
         return ctx.backpack.select().count() == 28
                 && !Fisher.AIOFisher.area2.contains(ctx.players.local())
                 && ctx.backpack.id(359).isEmpty() && Fisher.Constants.STILES && ctx.backpack.select().id(AIOFisher.fishOne).isEmpty();

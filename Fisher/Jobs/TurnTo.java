@@ -10,7 +10,6 @@ public class TurnTo extends Node {
 
     public TurnTo(MethodContext ctx) {
         super(ctx);
-
     }
 
     @Override

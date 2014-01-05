@@ -8,13 +8,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Created with IntelliJ IDEA.
- * User: PamontB
- * Date: 1/3/14
- * Time: 11:32 PM
- * To change this template use File | Settings | File Templates.
- */
 public class ToFishKaramja extends Node {
 
     public ToFishKaramja(MethodContext ctx) {
@@ -25,7 +18,6 @@ public class ToFishKaramja extends Node {
         return ctx.backpack.count() != 28 &&
                 !Fisher.AIOFisher.area.contains(ctx.players.local()) && Fisher.Constants.STILES;
     }
-
 
     public void execute(){
         try{

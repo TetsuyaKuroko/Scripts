@@ -7,13 +7,6 @@ import org.powerbot.script.wrappers.Item;
 
 import java.awt.*;
 
-/**
- * Created with IntelliJ IDEA.
- * User: PamontB
- * Date: 1/3/14
- * Time: 11:11 PM
- * To change this template use File | Settings | File Templates.
- */
 public class Dropping extends Node {
 
     public Dropping(MethodContext ctx) {
@@ -27,11 +20,10 @@ public class Dropping extends Node {
 
     public void execute(){
 
-        if(!ctx.hud.view(Hud.Window.BACKPACK)){
-            ctx.hud.view(Hud.Window.BACKPACK);
-        }
-
         if(ctx.combatBar.select().id(Fisher.AIOFisher.fishOne).isEmpty()){
+            if(!ctx.hud.view(Hud.Window.BACKPACK)){
+                ctx.hud.view(Hud.Window.BACKPACK);
+            }
             for(Item item : ctx.backpack.select().id(Fisher.AIOFisher.fishOne).first()){
                 Point slotPoint = new Point(ctx.widgets.get(1430, 18).getCenterPoint().x,
                         ctx.widgets.get(1430, 18).getCenterPoint().y);
@@ -42,6 +34,9 @@ public class Dropping extends Node {
         }
 
         if(ctx.combatBar.select().id(Fisher.AIOFisher.fishTwo).isEmpty()){
+            if(!ctx.hud.view(Hud.Window.BACKPACK)){
+                ctx.hud.view(Hud.Window.BACKPACK);
+            }
             for(Item item : ctx.backpack.select().id(Fisher.AIOFisher.fishTwo).first()){
                 Point slotPoint = new Point(ctx.widgets.get(1430, 17).getCenterPoint().x,
                         ctx.widgets.get(1430, 17).getCenterPoint().y);
